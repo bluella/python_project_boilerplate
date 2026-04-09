@@ -1,6 +1,6 @@
-# Claude Rules for Python Boilerplate
+# Python Project Boilerplate
 
-Opinionated `.claude/rules/` for Python projects.
+Mainly my preferred setup, which I use accross all the projects.
 
 Some ideas stolen from [@boris_again](https://t.me/boris_again) and [@danokhlopkov](https://t.me/danokhlopkov).
 
