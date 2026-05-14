@@ -11,7 +11,7 @@
 
 - **Use `plotly`** for all charts and visualizations — never `matplotlib`.
 - Use `plotly.graph_objects` for fine-grained control, `plotly.express` for quick exploration.
-- Plotly works well in both Jupyter notebooks and `.py` notebooks with `#%%` syntax.
+- **Use `.py` notebooks with `# %%` cell notation** — never `.ipynb` files. This is version-control-friendly and IDE-compatible.
 
 ## Core Dependencies
 

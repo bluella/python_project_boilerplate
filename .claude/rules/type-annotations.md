@@ -14,7 +14,7 @@ from collections.abc import Callable, Iterator
 
 JsonDict: TypeAlias = dict[str, "JsonValue"]
 JsonValue: TypeAlias = str | int | float | bool | None | list["JsonValue"] | JsonDict
-TransformFn: TypeAlias = Callable[[pd.DataFrame], pd.DataFrame]
+TransformFn: TypeAlias = Callable[[pl.DataFrame], pl.DataFrame]
 ```
 
 ## Generics
