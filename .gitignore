@@ -39,3 +39,6 @@ Thumbs.db
 
 # DuckDB
 *.duckdb.wal
+
+# In-flight implementation plans (deleted on completion; see .claude/CLAUDE.md)
+docs/plans

@@ -15,7 +15,7 @@ Guidelines for how to approach tasks — scoping, assumptions, and verification.
 *Minimum code that solves the problem. Nothing speculative.*
 
 - **No features beyond what was asked.** A bug fix doesn't need surrounding code cleaned up. A simple feature doesn't need extra configurability.
-- **No abstractions for single-use code.** Three similar lines is better than a premature abstraction.
+- **No abstractions for single-use code.** Three similar lines is better than a premature abstraction. This includes single-caller private helpers — keep the flow in one function; extract only what is shared by 2+ callers or genuinely separately testable (see "Locality over fragmentation" in general-philosophy.md).
 - **No speculative flexibility.** Don't add feature flags, config options, or extension points "just in case."
 - **No error handling for impossible scenarios.** Trust internal code and framework guarantees. Only validate at system boundaries.
 - **Self-check:** "Would a senior engineer say this is overcomplicated?"

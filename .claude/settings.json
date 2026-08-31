@@ -1,7 +1,21 @@
 {
+  "plansDirectory": "docs/plans",
   "permissions": {
     "allow": [
       "Bash(ruff check *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_external_plans.py\""
+          }
+        ]
+      }
     ]
   }
 }

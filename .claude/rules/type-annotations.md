@@ -5,16 +5,16 @@
 - **All public functions and methods must have complete type annotations** — parameters and return types.
 - **Use modern syntax** (`list[str]` not `List[str]`, `str | None` not `Optional[str]`).
 - **Never use `Any`** unless interfacing with genuinely untyped third-party code, and document why.
-- **Use `TypeAlias`** for complex types used more than once.
+- **Name an alias** for complex types used more than once — with the `type` keyword, not
+  `TypeAlias`, which `ruff` rejects under UP040.
 - **Use `Protocol`** for structural subtyping instead of ABCs where appropriate.
 
 ```python
-from typing import TypeAlias
 from collections.abc import Callable, Iterator
 
-JsonDict: TypeAlias = dict[str, "JsonValue"]
-JsonValue: TypeAlias = str | int | float | bool | None | list["JsonValue"] | JsonDict
-TransformFn: TypeAlias = Callable[[pl.DataFrame], pl.DataFrame]
+type JsonDict = dict[str, JsonValue]
+type JsonValue = str | int | float | bool | None | list[JsonValue] | JsonDict
+type TransformFn = Callable[[pl.DataFrame], pl.DataFrame]
 ```
 
 ## Generics

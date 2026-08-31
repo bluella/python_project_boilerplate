@@ -10,4 +10,4 @@ All data entering the system — from APIs, files, databases, user input, or ext
 - **Use `strict=True`** in Pydantic models to prevent silent type coercion.
 - **Use `Field(...)` constraints** (`min_length`, `ge`, `le`, `pattern`) instead of manual validation where possible.
 - **Custom validators** must be `@classmethod` and raise `ValueError` with descriptive messages.
-- **PyArrow schemas live in `src/storage/schema.py`; Pydantic models live in `config/schemas.py`** — never inline in scripts or service functions.
+- **PyArrow storage schemas live in `src/storage/schema.py`; vendor boundary (Pydantic) schemas live with their vendor** (e.g. `src/vendors/<vendor>_schemas.py`) — never inline in scripts or service functions.

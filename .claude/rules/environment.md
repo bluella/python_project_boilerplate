@@ -32,12 +32,12 @@ No Airflow/Spark/Docker/Postgres — kept simple for research.
 ## Environment Variables
 
 - **Store secrets and configuration in `.env`** at the project root.
-- **Use `python-dotenv`** to load environment variables. Call `load_dotenv()` once at application entry points (e.g., `config/settings.py`), not scattered across modules.
+- **Use `python-dotenv`** to load environment variables. Call `load_dotenv()` once at application entry points (e.g., `src/config/settings.py`), not scattered across modules.
 - **Never commit `.env` to version control.** Ensure `.env` is in `.gitignore`.
 - **Provide a `.env.example`** with placeholder values for required variables so new contributors know what to set.
 
 ```python
-# config/settings.py
+# src/config/settings.py
 from dotenv import load_dotenv
 
 load_dotenv()  # loads .env from project root
